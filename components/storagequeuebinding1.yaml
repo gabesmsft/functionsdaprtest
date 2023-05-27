@@ -1,0 +1,17 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: mybindingforoutput
+  namespace: default
+spec:
+  type: bindings.azure.storagequeues
+  version: v1
+  metadata:
+  - name: storageAccount
+    value: REDACTED_ACCOUNTNAME
+  - name: storageAccessKey
+    value: REDACTED_KEY
+  - name: queue
+    value: mystorequeue1
+  - name: ttlInSeconds
+    value: 600
